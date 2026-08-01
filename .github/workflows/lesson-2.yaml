@@ -38,7 +38,8 @@ jobs:
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
       - name: '**PLACEHOLDER** Deploy to Elastic Beanstalk'
-        run: echo Placeholder for Deploymentname: Lesson 2
+        run: echo Placeholder for Deployment
+        name: Lesson 2
 
 on:
   push:
