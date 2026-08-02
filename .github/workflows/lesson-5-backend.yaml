@@ -23,7 +23,7 @@ jobs:
           pip install pytest django_mock_queries six coverage
       - name: Run security test
         run: |
-          pytest --disable-warnings --maxfail=1 --tb=short --sast
+          pytest --disable-warnings --maxfail=1 --tb=short
   build_and_test:
     needs: [security_test]
     runs-on: ubuntu-latest
