@@ -13,6 +13,10 @@ jobs:
     name: Execute the PyCharm security test
     steps:
       - uses: actions/checkout@v4
+      - name: disable debug
+        run: |
+          sed -i 's/debug = True/debug = False/g' \
+          hangry_api/hangry_api/settings.py
       - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
